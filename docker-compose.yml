@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  db:
-    image: sqlite3
+  # db:
+  #   image: sqlite3
   web:
     build: .
     environment:
@@ -12,8 +12,8 @@ services:
       - .:/code
     ports:
       - "8000:8000"
-    depends_on:
-      - db
+    # depends_on:
+    #   - db
 
   # mailhog:
   #   image: mailhog/mailhog
